@@ -9,6 +9,7 @@ import (
 	"belajar-golang/forexpress"
 	helloWlrd "belajar-golang/helloworld"
 	ifexpression "belajar-golang/ifExpression"
+	recrusivefuntion "belajar-golang/recrusiveFuntion"
 	switchexpres "belajar-golang/switchExpres"
 	tipedeklarasi "belajar-golang/tipedeklarasi"
 	"belajar-golang/tipemap"
@@ -77,6 +78,18 @@ func spamFilter(name string) string {
 		return name
 	}
 }
+
+// anonim funciton / function tanpa nama
+type BlackList func(string) bool
+
+func Register(name string, blacklist BlackList) {
+	if blacklist(name) {
+		fmt.Println("you are blocked")
+	} else {
+		fmt.Println("Welcome", name)
+	}
+}
+
 func main() {
 	helloWlrd.Hello()
 	integer.Int_()
@@ -109,4 +122,16 @@ func main() {
 	sayHelloWithFilter("Ridho", spamFilter)
 	sayHelloWithFilter("babi", spamFilter)
 	sayHelloWithFilter("anjing", spamFilter)
+	// anon func
+	blacklist := func(name string) bool {
+		return name == "anjing"
+	}
+	Register("Ridho ganteng", blacklist)
+	Register("Anjing", func(name string) bool {
+		return name == "babi" || name == "Anjing"
+	})
+	recrusive := recrusivefuntion.Factorial(10)
+	fmt.Println(recrusive)
+	recrusivetwo := recrusivefuntion.FactorialTwo(10)
+	fmt.Println(recrusivetwo)
 }
