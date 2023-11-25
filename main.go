@@ -1,16 +1,22 @@
 package main
 
 import (
+	funcdefer "belajar-golang/FuncDefer"
 	integer "belajar-golang/Integer"
+	interfaces "belajar-golang/Interfaces"
 	Slice "belajar-golang/Slice_"
 	Str "belajar-golang/String"
+	tipeclosure "belajar-golang/TipeClosure"
 	array "belajar-golang/arr"
 	Bool "belajar-golang/boolean"
 	"belajar-golang/forexpress"
+	funcpanic "belajar-golang/funcPanic"
+	funcrecover "belajar-golang/funcRecover"
 	helloWlrd "belajar-golang/helloworld"
 	ifexpression "belajar-golang/ifExpression"
 	recrusivefuntion "belajar-golang/recrusiveFuntion"
 	switchexpres "belajar-golang/switchExpres"
+	tempstruct "belajar-golang/tempStruct"
 	tipedeklarasi "belajar-golang/tipedeklarasi"
 	"belajar-golang/tipemap"
 	"fmt"
@@ -134,4 +140,11 @@ func main() {
 	fmt.Println(recrusive)
 	recrusivetwo := recrusivefuntion.FactorialTwo(10)
 	fmt.Println(recrusivetwo)
+	tipeclosure.TestClosures()
+	funcdefer.FunctionDefer()
+	funcpanic.RunApp(false)
+	funcrecover.RunApp(false)
+	tempstruct.TestStruct()
+	tempstruct.HelloW()
+	interfaces.Cetak()
 }
