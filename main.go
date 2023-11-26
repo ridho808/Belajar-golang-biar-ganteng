@@ -1,24 +1,33 @@
 package main
 
 import (
+	asteriskoprator "belajar-golang/AsteriskOprator"
 	funcdefer "belajar-golang/FuncDefer"
 	integer "belajar-golang/Integer"
 	interfaces "belajar-golang/Interfaces"
+	nill "belajar-golang/Nill"
+	pointer "belajar-golang/Pointer"
+	pointermethod "belajar-golang/PointerMethod"
 	Slice "belajar-golang/Slice_"
 	Str "belajar-golang/String"
 	tipeclosure "belajar-golang/TipeClosure"
 	array "belajar-golang/arr"
 	Bool "belajar-golang/boolean"
+	"belajar-golang/error_"
 	"belajar-golang/forexpress"
 	funcpanic "belajar-golang/funcPanic"
 	funcrecover "belajar-golang/funcRecover"
 	helloWlrd "belajar-golang/helloworld"
 	ifexpression "belajar-golang/ifExpression"
+	"belajar-golang/interfacestwo"
+	newopration "belajar-golang/newOpration"
+	pointerfunc "belajar-golang/pointerFunc"
 	recrusivefuntion "belajar-golang/recrusiveFuntion"
 	switchexpres "belajar-golang/switchExpres"
 	tempstruct "belajar-golang/tempStruct"
 	tipedeklarasi "belajar-golang/tipedeklarasi"
 	"belajar-golang/tipemap"
+	typeassertion "belajar-golang/typeAssertion"
 	"fmt"
 )
 
@@ -147,4 +156,13 @@ func main() {
 	tempstruct.TestStruct()
 	tempstruct.HelloW()
 	interfaces.Cetak()
+	interfacestwo.Ups()
+	nill.CheckName()
+	typeassertion.CheckData()
+	pointer.Array1()
+	asteriskoprator.AsteriskOP()
+	newopration.CheckAddress()
+	pointerfunc.PointerFunc()
+	pointermethod.PointerMethod()
+	error_.Pembagian()
 }

@@ -10,12 +10,12 @@ type HasName interface {
 	getName() string
 }
 
-type Person struct {
-	Name string
-}
-
 func (person Person) getName() string {
 	return person.Name
+}
+
+type Person struct {
+	Name string
 }
 
 func SayHello(hasname HasName) {
